@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1fe5b3;
+  width: 100vw;
+  height: 100vh;
+  transition: 1.2s;
+}
+
+.toggledBg {
+  background: #f56e69;
+  transition: 1.2s;
+}
+.toggle {
+  width: 120px;
+  height: 50px;
+  background: rgba(240, 240, 240, 0.6);
+  border-radius: 100rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+  transition: 0.6s;
+}
+.toggle:after {
+  transition: 0.6s;
+  transition-delay: 0.3s;
+  width: 40px;
+  height: 40px;
+  background: white;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  content: "";
+  border-radius: inherit;
+}
+.toggled {
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+  transition: 0.6s;
+}
+.toggled:after {
+  transition: 0.6s;
+  transition-delay: 0.3s;
+  width: 40px;
+  height: 40px;
+  background: white;
+  position: absolute;
+  left: calc(120px - 45px);
+  top: 5px;
+  content: "";
+  border-radius: inherit;
+}
